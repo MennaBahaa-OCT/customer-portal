@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Portal</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fugaz+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <!-- our custom CSS -->
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/categories.css">
+</head>
+<body class="categories-body">
+<!-- Main section containing the overlay and navigation bar -->
+<div class="main-section">
+    <div class="overlay">
+        <!-- Navigation Bar -->
+        <nav class="navbar navbar-expand-lg py-md-4 navbar-dark bg-dark-mobile">
+            <!-- Website Logo and Brand Name -->
+            <a class="navbar-brand" href="#">
+                <img src="/assets/bootstrap-solid.svg" width="30" height="30" class="d-inline-block align-top" alt="">
+                <span class="nav-main-title">SUMMIT FITNESS</span>
+            </a>
+            <!-- Mobile menu toggle button -->
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <!-- Navbar links -->
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link px-3" href="#">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link px-3" href="#">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link px-3" href="#">Trust & Safety</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link px-3" href="#">FAQs</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link px-3" href="#">Contact</a>
+                    </li>
+                    <!-- Booking button -->
+                    <li class="nav-item">
+                        <button class="btn book-class-btn">Book A Class</button>
+                    </li>
+                    <!-- Sign Up and Log In links -->
+                    <li class="nav-item">
+                        <a class="nav-link px-3" href="#">Sign Up</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link px-3" href="#">Log In</a>
+                    </li>
+                    <!-- Language dropdown menu -->
+                    <li class="nav-item dropdown">
+                        <button class="btn book-class-btn dropdown-toggle" id="navbarDropdown" role="button"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Language
+                        </button>
+                        <div class="dropdown-menu dropdown-position" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="#" onclick="switchLanguage('ar')">arabic</a>
+                            <a class="dropdown-item" href="#" onclick="switchLanguage('en')">english</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        <!-- Main section title and description -->
+        <div class="container main-titles-positions pt-md-0 pt-3">
+            <div class="first-title">
+                <h1 class="first-container-main-title">CATEGORIES</h1>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Categories Section -->
+<div class="categories-section">
+    <!-- Section Title -->
+    <p class="section-title">CATEGORIES</p>
+
+    <!-- Grid container for different categories cards -->
+    <div class="categories-grid">
+        <div class="category-card">
+            <img src="/assets/catg3.jpeg" alt="Strength">
+            <div class="category-overlay">
+                <div class="category-title">STRENGTH</div>
+                <div class="category-text">Build power and endurance with expert-designed programs.</div>
+            </div>
+        </div>
+        <div class="category-card">
+            <img src="/assets/catg2.jpeg" alt="Cardio">
+            <div class="category-overlay">
+                <div class="category-title">CARDIO</div>
+                <div class="category-text">Boost your heart health and burn calories efficiently.</div>
+            </div>
+        </div>
+        <div class="category-card">
+            <img src="/assets/catg1.jpeg" alt="Flexibility">
+            <div class="category-overlay">
+                <div class="category-title">FLEXIBILITY</div>
+                <div class="category-text">Improve mobility, reduce stiffness, and enhance performance.</div>
+            </div>
+        </div>
+        <div class="category-card">
+            <img src="/assets/catg2.jpeg" alt="Cardio">
+            <div class="category-overlay">
+                <div class="category-title">CARDIO</div>
+                <div class="category-text">Boost your heart health and burn calories efficiently.</div>
+            </div>
+        </div>
+        <div class="category-card">
+            <img src="/assets/catg2.jpeg" alt="Cardio">
+            <div class="category-overlay">
+                <div class="category-title">CARDIO</div>
+                <div class="category-text">Boost your heart health and burn calories efficiently.</div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Footer Section -->
+<footer class="footer">
+    <div class="footer-container">
+        <!-- Left: Logo and Policies -->
+        <div class="footer-left">
+            <p class="footer-title">SUMMIT FITNESS</p>
+
+
+            <!-- Contact Info Box -->
+            <div class="footer-contact-modern">
+                <div class="contact-icon">
+                    <i class="fas fa-phone-alt"></i>
+                </div>
+                <div class="contact-details">
+                    <span class="contact-number">0432 552 340</span>
+                    <span class="contact-hours">Mon - Fri: 9:30am - 5:00pm</span>
+                </div>
+            </div>
+
+        </div>
+        <!-- Right: App Download Buttons -->
+        <div class="footer-right">
+            <div class="footer-menu">
+                <a href="#">Home</a>
+                <a href="#">About Us</a>
+                <a href="#">Trust & Safety</a>
+                <a href="#">Contact</a>
+            </div>
+
+            <div class="footer-imgs">
+                <a href="#" class="app-store mr-1">
+                    <img src="/assets/download-on-the-app-store.svg" alt="App Store">
+                </a>
+                <a href="#" class="google-play">
+                    <img src="/assets/GetItOnGooglePlay_Badge_Web_color_English.png" alt="Google Play">
+                </a>
+            </div>
+
+            <div class="footer-social-icons">
+                <div class="d-flex">
+                    <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-youtube"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-google"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-pinterest"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#" class="social-icon"><i class="fas fa-rss"></i></a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="privacy-and-terms-section">
+        <span><a href="#">Privacy & Policy</a> | <a href="#">Terms & Conditions</a></span>
+    </div>
+</footer>
+
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
+
+<script>
+    function switchLanguage(lang) {
+        document.documentElement.lang = lang;
+        document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr';
+        if (lang === 'ar') {
+            document.body.classList.add('rtl');
+        } else {
+            document.body.classList.remove('rtl');
+        }
+        // Load content for the selected language
+    }
+
+    document.querySelector('.toggle-container').addEventListener('click', function () {
+        let onPremise = document.getElementById('on-premise');
+        let mobile = document.getElementById('mobile');
+
+        if (onPremise.classList.contains('active')) {
+            onPremise.classList.remove('active');
+            onPremise.classList.add('inactive');
+            mobile.classList.remove('inactive');
+            mobile.classList.add('active');
+        } else {
+            onPremise.classList.remove('inactive');
+            onPremise.classList.add('active');
+            mobile.classList.remove('active');
+            mobile.classList.add('inactive');
+        }
+    });
+</script>

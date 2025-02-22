@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Portal</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fugaz+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <!-- our custom CSS -->
+    <link rel="stylesheet" href="css/base.css">
+</head>
+<body>
+<!-- Main section containing the overlay and navigation bar -->
+<div class="main-section">
+    <div class="overlay">
+        <!-- Navigation Bar -->
+        <nav class="navbar navbar-expand-lg py-md-4 navbar-dark bg-dark-mobile">
+            <!-- Website Logo and Brand Name -->
+            <a class="navbar-brand" href="#">
+                <img src="/assets/bootstrap-solid.svg" width="30" height="30" class="d-inline-block align-top" alt="">
+                <span class="nav-main-title">SUMMIT FITNESS</span>
+            </a>
+            <!-- Mobile menu toggle button -->
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <!-- Navbar links -->
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item active">
+                        <a class="nav-link px-3" href="index.html">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link px-3" href="#">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link px-3" href="#">Trust & Safety</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link px-3" href="#">FAQs</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link px-3" href="#">Contact</a>
+                    </li>
+                    <!-- Booking button -->
+                    <li class="nav-item">
+                        <button class="btn book-class-btn">Book A Class</button>
+                    </li>
+                    <!-- Sign Up and Log In links -->
+                    <li class="nav-item">
+                        <a class="nav-link px-3" href="#">Sign Up</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link px-3" href="#">Log In</a>
+                    </li>
+                    <!-- Language dropdown menu -->
+                    <li class="nav-item dropdown">
+                        <button class="btn book-class-btn dropdown-toggle" id="navbarDropdown" role="button"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Language
+                        </button>
+                        <div class="dropdown-menu dropdown-position" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="#" onclick="switchLanguage('ar')">arabic</a>
+                            <a class="dropdown-item" href="#" onclick="switchLanguage('en')">english</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        <!-- Main section title and description -->
+        <div class="container main-titles-positions pt-md-0 pt-3">
+            <div class="first-title">
+                <h1 class="first-container-main-title">Elevate Your Fitness. </h1>
+                <h1 class="first-container-main-title">Empower Your Life</h1>
+            </div>
+
+            <div class="second-title">
+                <p class="second-container-main-title">Sydney CBD's best fitness classes.
+                    <br>
+                    Come to us, or we can come to you.
+                    <br>
+                    Book 6am - 9pm 7 Days a week
+                </p>
+            </div>
+
+            <!-- Call-to-action button -->
+            <div>
+                <a href="#" class="btn btn-primary main-section-book-class-btn">BOOK A CLASS</a>
+            </div>
+
+            <!-- Downward arrow for navigation -->
+            <div class="arrow">
+                <svg width="42" height="42" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g clip-path="url(#clip0_24_108)">
+                        <path d="M21 6.5625V35.4375" stroke="white" stroke-width="1.5" stroke-linecap="round"
+                              stroke-linejoin="round"/>
+                        <path d="M9.1875 23.625L21 35.4375L32.8125 23.625" stroke="white" stroke-width="1.5"
+                              stroke-linecap="round" stroke-linejoin="round"/>
+                    </g>
+                    <defs>
+                        <clipPath id="clip0_24_108">
+                            <rect width="42" height="42" fill="white"/>
+                        </clipPath>
+                    </defs>
+                </svg>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Comments/Reviews Section -->
+<div class="comments-section">
+    <div class="comments-container">
+        <div class="comment">
+            <!-- Star Rating Icons -->
+            <div class="stars">
+                <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M8.54894 0.927052C8.8483 0.00574112 10.1517 0.00573993 10.4511 0.927051L11.9697 5.60081C12.1035 6.01284 12.4875 6.2918 12.9207 6.2918H17.835C18.8037 6.2918 19.2065 7.53141 18.4228 8.10081L14.447 10.9894C14.0966 11.244 13.9499 11.6954 14.0838 12.1074L15.6024 16.7812C15.9017 17.7025 14.8472 18.4686 14.0635 17.8992L10.0878 15.0106C9.7373 14.756 9.2627 14.756 8.91221 15.0106L4.93648 17.8992C4.15276 18.4686 3.09828 17.7025 3.39763 16.7812L4.91623 12.1074C5.05011 11.6954 4.90345 11.244 4.55296 10.9894L0.577221 8.10081C-0.206493 7.53141 0.196283 6.2918 1.16501 6.2918H6.07929C6.51252 6.2918 6.89647 6.01284 7.03035 5.60081L8.54894 0.927052Z"
+                          fill="black"/>
+                </svg>
+                <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M8.54894 0.927052C8.8483 0.00574112 10.1517 0.00573993 10.4511 0.927051L11.9697 5.60081C12.1035 6.01284 12.4875 6.2918 12.9207 6.2918H17.835C18.8037 6.2918 19.2065 7.53141 18.4228 8.10081L14.447 10.9894C14.0966 11.244 13.9499 11.6954 14.0838 12.1074L15.6024 16.7812C15.9017 17.7025 14.8472 18.4686 14.0635 17.8992L10.0878 15.0106C9.7373 14.756 9.2627 14.756 8.91221 15.0106L4.93648 17.8992C4.15276 18.4686 3.09828 17.7025 3.39763 16.7812L4.91623 12.1074C5.05011 11.6954 4.90345 11.244 4.55296 10.9894L0.577221 8.10081C-0.206493 7.53141 0.196283 6.2918 1.16501 6.2918H6.07929C6.51252 6.2918 6.89647 6.01284 7.03035 5.60081L8.54894 0.927052Z"
+                          fill="black"/>
+                </svg>
+                <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M8.54894 0.927052C8.8483 0.00574112 10.1517 0.00573993 10.4511 0.927051L11.9697 5.60081C12.1035 6.01284 12.4875 6.2918 12.9207 6.2918H17.835C18.8037 6.2918 19.2065 7.53141 18.4228 8.10081L14.447 10.9894C14.0966 11.244 13.9499 11.6954 14.0838 12.1074L15.6024 16.7812C15.9017 17.7025 14.8472 18.4686 14.0635 17.8992L10.0878 15.0106C9.7373 14.756 9.2627 14.756 8.91221 15.0106L4.93648 17.8992C4.15276 18.4686 3.09828 17.7025 3.39763 16.7812L4.91623 12.1074C5.05011 11.6954 4.90345 11.244 4.55296 10.9894L0.577221 8.10081C-0.206493 7.53141 0.196283 6.2918 1.16501 6.2918H6.07929C6.51252 6.2918 6.89647 6.01284 7.03035 5.60081L8.54894 0.927052Z"
+                          fill="black"/>
+                </svg>
+                <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M8.54894 0.927052C8.8483 0.00574112 10.1517 0.00573993 10.4511 0.927051L11.9697 5.60081C12.1035 6.01284 12.4875 6.2918 12.9207 6.2918H17.835C18.8037 6.2918 19.2065 7.53141 18.4228 8.10081L14.447 10.9894C14.0966 11.244 13.9499 11.6954 14.0838 12.1074L15.6024 16.7812C15.9017 17.7025 14.8472 18.4686 14.0635 17.8992L10.0878 15.0106C9.7373 14.756 9.2627 14.756 8.91221 15.0106L4.93648 17.8992C4.15276 18.4686 3.09828 17.7025 3.39763 16.7812L4.91623 12.1074C5.05011 11.6954 4.90345 11.244 4.55296 10.9894L0.577221 8.10081C-0.206493 7.53141 0.196283 6.2918 1.16501 6.2918H6.07929C6.51252 6.2918 6.89647 6.01284 7.03035 5.60081L8.54894 0.927052Z"
+                          fill="black"/>
+                </svg>
+                <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M8.54894 0.927052C8.8483 0.00574112 10.1517 0.00573993 10.4511 0.927051L11.9697 5.60081C12.1035 6.01284 12.4875 6.2918 12.9207 6.2918H17.835C18.8037 6.2918 19.2065 7.53141 18.4228 8.10081L14.447 10.9894C14.0966 11.244 13.9499 11.6954 14.0838 12.1074L15.6024 16.7812C15.9017 17.7025 14.8472 18.4686 14.0635 17.8992L10.0878 15.0106C9.7373 14.756 9.2627 14.756 8.91221 15.0106L4.93648 17.8992C4.15276 18.4686 3.09828 17.7025 3.39763 16.7812L4.91623 12.1074C5.05011 11.6954 4.90345 11.244 4.55296 10.9894L0.577221 8.10081C-0.206493 7.53141 0.196283 6.2918 1.16501 6.2918H6.07929C6.51252 6.2918 6.89647 6.01284 7.03035 5.60081L8.54894 0.927052Z"
+                          fill="black"/>
+                </svg>
+            </div>
+            <!-- Review text -->
+            <p class="mb-2">Awesome classes & coaches. Highly recommended.</p>
+            <p class="mb-0">Sam Wilson</p>
+            <span class="date-span">Nov 12, 2024</span>
+        </div>
+
+        <div class="comment">
+            <div class="stars">
+                <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M8.54894 0.927052C8.8483 0.00574112 10.1517 0.00573993 10.4511 0.927051L11.9697 5.60081C12.1035 6.01284 12.4875 6.2918 12.9207 6.2918H17.835C18.8037 6.2918 19.2065 7.53141 18.4228 8.10081L14.447 10.9894C14.0966 11.244 13.9499 11.6954 14.0838 12.1074L15.6024 16.7812C15.9017 17.7025 14.8472 18.4686 14.0635 17.8992L10.0878 15.0106C9.7373 14.756 9.2627 14.756 8.91221 15.0106L4.93648 17.8992C4.15276 18.4686 3.09828 17.7025 3.39763 16.7812L4.91623 12.1074C5.05011 11.6954 4.90345 11.244 4.55296 10.9894L0.577221 8.10081C-0.206493 7.53141 0.196283 6.2918 1.16501 6.2918H6.07929C6.51252 6.2918 6.89647 6.01284 7.03035 5.60081L8.54894 0.927052Z"
+                          fill="black"/>
+                </svg>
+                <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M8.54894 0.927052C8.8483 0.00574112 10.1517 0.00573993 10.4511 0.927051L11.9697 5.60081C12.1035 6.01284 12.4875 6.2918 12.9207 6.2918H17.835C18.8037 6.2918 19.2065 7.53141 18.4228 8.10081L14.447 10.9894C14.0966 11.244 13.9499 11.6954 14.0838 12.1074L15.6024 16.7812C15.9017 17.7025 14.8472 18.4686 14.0635 17.8992L10.0878 15.0106C9.7373 14.756 9.2627 14.756 8.91221 15.0106L4.93648 17.8992C4.15276 18.4686 3.09828 17.7025 3.39763 16.7812L4.91623 12.1074C5.05011 11.6954 4.90345 11.244 4.55296 10.9894L0.577221 8.10081C-0.206493 7.53141 0.196283 6.2918 1.16501 6.2918H6.07929C6.51252 6.2918 6.89647 6.01284 7.03035 5.60081L8.54894 0.927052Z"
+                          fill="black"/>
+                </svg>
+                <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M8.54894 0.927052C8.8483 0.00574112 10.1517 0.00573993 10.4511 0.927051L11.9697 5.60081C12.1035 6.01284 12.4875 6.2918 12.9207 6.2918H17.835C18.8037 6.2918 19.2065 7.53141 18.4228 8.10081L14.447 10.9894C14.0966 11.244 13.9499 11.6954 14.0838 12.1074L15.6024 16.7812C15.9017 17.7025 14.8472 18.4686 14.0635 17.8992L10.0878 15.0106C9.7373 14.756 9.2627 14.756 8.91221 15.0106L4.93648 17.8992C4.15276 18.4686 3.09828 17.7025 3.39763 16.7812L4.91623 12.1074C5.05011 11.6954 4.90345 11.244 4.55296 10.9894L0.577221 8.10081C-0.206493 7.53141 0.196283 6.2918 1.16501 6.2918H6.07929C6.51252 6.2918 6.89647 6.01284 7.03035 5.60081L8.54894 0.927052Z"
+                          fill="black"/>
+                </svg>
+                <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M8.54894 0.927052C8.8483 0.00574112 10.1517 0.00573993 10.4511 0.927051L11.9697 5.60081C12.1035 6.01284 12.4875 6.2918 12.9207 6.2918H17.835C18.8037 6.2918 19.2065 7.53141 18.4228 8.10081L14.447 10.9894C14.0966 11.244 13.9499 11.6954 14.0838 12.1074L15.6024 16.7812C15.9017 17.7025 14.8472 18.4686 14.0635 17.8992L10.0878 15.0106C9.7373 14.756 9.2627 14.756 8.91221 15.0106L4.93648 17.8992C4.15276 18.4686 3.09828 17.7025 3.39763 16.7812L4.91623 12.1074C5.05011 11.6954 4.90345 11.244 4.55296 10.9894L0.577221 8.10081C-0.206493 7.53141 0.196283 6.2918 1.16501 6.2918H6.07929C6.51252 6.2918 6.89647 6.01284 7.03035 5.60081L8.54894 0.927052Z"
+                          fill="black"/>
+                </svg>
+                <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M8.54894 0.927052C8.8483 0.00574112 10.1517 0.00573993 10.4511 0.927051L11.9697 5.60081C12.1035 6.01284 12.4875 6.2918 12.9207 6.2918H17.835C18.8037 6.2918 19.2065 7.53141 18.4228 8.10081L14.447 10.9894C14.0966 11.244 13.9499 11.6954 14.0838 12.1074L15.6024 16.7812C15.9017 17.7025 14.8472 18.4686 14.0635 17.8992L10.0878 15.0106C9.7373 14.756 9.2627 14.756 8.91221 15.0106L4.93648 17.8992C4.15276 18.4686 3.09828 17.7025 3.39763 16.7812L4.91623 12.1074C5.05011 11.6954 4.90345 11.244 4.55296 10.9894L0.577221 8.10081C-0.206493 7.53141 0.196283 6.2918 1.16501 6.2918H6.07929C6.51252 6.2918 6.89647 6.01284 7.03035 5.60081L8.54894 0.927052Z"
+                          fill="black"/>
+                </svg>
+            </div>
+            <p class="mb-2">Awesome classes & coaches. Highly recommended.</p>
+            <p class="mb-0">Sam Wilson</p>
+            <span class="date-span">Nov 12, 2024</span>
+        </div>
+
+        <div class="comment">
+            <div class="stars">
+                <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M8.54894 0.927052C8.8483 0.00574112 10.1517 0.00573993 10.4511 0.927051L11.9697 5.60081C12.1035 6.01284 12.4875 6.2918 12.9207 6.2918H17.835C18.8037 6.2918 19.2065 7.53141 18.4228 8.10081L14.447 10.9894C14.0966 11.244 13.9499 11.6954 14.0838 12.1074L15.6024 16.7812C15.9017 17.7025 14.8472 18.4686 14.0635 17.8992L10.0878 15.0106C9.7373 14.756 9.2627 14.756 8.91221 15.0106L4.93648 17.8992C4.15276 18.4686 3.09828 17.7025 3.39763 16.7812L4.91623 12.1074C5.05011 11.6954 4.90345 11.244 4.55296 10.9894L0.577221 8.10081C-0.206493 7.53141 0.196283 6.2918 1.16501 6.2918H6.07929C6.51252 6.2918 6.89647 6.01284 7.03035 5.60081L8.54894 0.927052Z"
+                          fill="black"/>
+                </svg>
+                <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M8.54894 0.927052C8.8483 0.00574112 10.1517 0.00573993 10.4511 0.927051L11.9697 5.60081C12.1035 6.01284 12.4875 6.2918 12.9207 6.2918H17.835C18.8037 6.2918 19.2065 7.53141 18.4228 8.10081L14.447 10.9894C14.0966 11.244 13.9499 11.6954 14.0838 12.1074L15.6024 16.7812C15.9017 17.7025 14.8472 18.4686 14.0635 17.8992L10.0878 15.0106C9.7373 14.756 9.2627 14.756 8.91221 15.0106L4.93648 17.8992C4.15276 18.4686 3.09828 17.7025 3.39763 16.7812L4.91623 12.1074C5.05011 11.6954 4.90345 11.244 4.55296 10.9894L0.577221 8.10081C-0.206493 7.53141 0.196283 6.2918 1.16501 6.2918H6.07929C6.51252 6.2918 6.89647 6.01284 7.03035 5.60081L8.54894 0.927052Z"
+                          fill="black"/>
+                </svg>
+                <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M8.54894 0.927052C8.8483 0.00574112 10.1517 0.00573993 10.4511 0.927051L11.9697 5.60081C12.1035 6.01284 12.4875 6.2918 12.9207 6.2918H17.835C18.8037 6.2918 19.2065 7.53141 18.4228 8.10081L14.447 10.9894C14.0966 11.244 13.9499 11.6954 14.0838 12.1074L15.6024 16.7812C15.9017 17.7025 14.8472 18.4686 14.0635 17.8992L10.0878 15.0106C9.7373 14.756 9.2627 14.756 8.91221 15.0106L4.93648 17.8992C4.15276 18.4686 3.09828 17.7025 3.39763 16.7812L4.91623 12.1074C5.05011 11.6954 4.90345 11.244 4.55296 10.9894L0.577221 8.10081C-0.206493 7.53141 0.196283 6.2918 1.16501 6.2918H6.07929C6.51252 6.2918 6.89647 6.01284 7.03035 5.60081L8.54894 0.927052Z"
+                          fill="black"/>
+                </svg>
+                <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M8.54894 0.927052C8.8483 0.00574112 10.1517 0.00573993 10.4511 0.927051L11.9697 5.60081C12.1035 6.01284 12.4875 6.2918 12.9207 6.2918H17.835C18.8037 6.2918 19.2065 7.53141 18.4228 8.10081L14.447 10.9894C14.0966 11.244 13.9499 11.6954 14.0838 12.1074L15.6024 16.7812C15.9017 17.7025 14.8472 18.4686 14.0635 17.8992L10.0878 15.0106C9.7373 14.756 9.2627 14.756 8.91221 15.0106L4.93648 17.8992C4.15276 18.4686 3.09828 17.7025 3.39763 16.7812L4.91623 12.1074C5.05011 11.6954 4.90345 11.244 4.55296 10.9894L0.577221 8.10081C-0.206493 7.53141 0.196283 6.2918 1.16501 6.2918H6.07929C6.51252 6.2918 6.89647 6.01284 7.03035 5.60081L8.54894 0.927052Z"
+                          fill="black"/>
+                </svg>
+                <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M8.54894 0.927052C8.8483 0.00574112 10.1517 0.00573993 10.4511 0.927051L11.9697 5.60081C12.1035 6.01284 12.4875 6.2918 12.9207 6.2918H17.835C18.8037 6.2918 19.2065 7.53141 18.4228 8.10081L14.447 10.9894C14.0966 11.244 13.9499 11.6954 14.0838 12.1074L15.6024 16.7812C15.9017 17.7025 14.8472 18.4686 14.0635 17.8992L10.0878 15.0106C9.7373 14.756 9.2627 14.756 8.91221 15.0106L4.93648 17.8992C4.15276 18.4686 3.09828 17.7025 3.39763 16.7812L4.91623 12.1074C5.05011 11.6954 4.90345 11.244 4.55296 10.9894L0.577221 8.10081C-0.206493 7.53141 0.196283 6.2918 1.16501 6.2918H6.07929C6.51252 6.2918 6.89647 6.01284 7.03035 5.60081L8.54894 0.927052Z"
+                          fill="black"/>
+                </svg>
+            </div>
+            <p class="mb-2">Awesome classes & coaches. Highly recommended.</p>
+            <p class="mb-0">Sam Wilson</p>
+            <span class="date-span">Nov 12, 2024</span>
+        </div>
+    </div>
+</div>
+
+<!-- How It Works Section -->
+<div class="how-it-works-section">
+    <div class="container">
+        <span class="section-title">HOW IT WORKS</span>
+        <div class="steps mt-5">
+            <div class="step">
+                <div class="circle">1</div>
+                <p class="step-title">CHOOSE</p>
+                <p class="step-info">Choose the class you want</p>
+            </div>
+            <div class="step">
+                <div class="circle">2</div>
+                <p class="step-title">SET LOCATION</p>
+                <p class="step-info">Select if you want to come to one of our inner city studios, or if you'd prefer we
+                    come to you</p>
+            </div>
+            <div class="step">
+                <div class="circle">3</div>
+                <p class="step-title">CONFIRM</p>
+                <p class="step-info">One of our trainers will confirm your class appointment in seconds</p>
+            </div>
+            <div class="step">
+                <div class="circle">4</div>
+                <p class="step-title">ENJOY</p>
+                <p class="step-info">Enjoy your session</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Categories Section -->
+<div class="categories-section">
+    <!-- Section Title -->
+    <p class="section-title">CATEGORIES</p>
+
+    <!-- Grid container for different categories cards -->
+    <div class="categories-grid">
+        <div class="category-card">
+            <a href="pages/categories.html">
+                <img src="/assets/catg3.jpeg" alt="Strength">
+                <div class="category-overlay">
+                    <div class="category-title">STRENGTH</div>
+                    <div class="category-text">Build power and endurance with expert-designed programs.</div>
+                </div>
+            </a>
+        </div>
+        <div class="category-card">
+            <a href="pages/categories.html">
+                <img src="/assets/catg2.jpeg" alt="Cardio">
+                <div class="category-overlay">
+                    <div class="category-title">CARDIO</div>
+                    <div class="category-text">Boost your heart health and burn calories efficiently.</div>
+                </div>
+            </a>
+        </div>
+        <div class="category-card">
+            <a href="pages/categories.html">
+                <img src="/assets/catg1.jpeg" alt="Flexibility">
+                <div class="category-overlay">
+                    <div class="category-title">FLEXIBILITY</div>
+                    <div class="category-text">Improve mobility, reduce stiffness, and enhance performance.</div>
+                </div>
+            </a>
+        </div>
+        <div class="category-card">
+            <a href="pages/categories.html">
+                <img src="/assets/catg2.jpeg" alt="Cardio">
+                <div class="category-overlay">
+                    <div class="category-title">CARDIO</div>
+                    <div class="category-text">Boost your heart health and burn calories efficiently.</div>
+                </div>
+            </a>
+        </div>
+        <div class="category-card">
+            <a href="pages/categories.html">
+                <img src="/assets/catg2.jpeg" alt="Cardio">
+                <div class="category-overlay">
+                    <div class="category-title">CARDIO</div>
+                    <div class="category-text">Boost your heart health and burn calories efficiently.</div>
+                </div>
+            </a>
+        </div>
+    </div>
+</div>
+
+<!-- Classes Section -->
+<div class="classes-section">
+    <!-- Section Title -->
+    <p class="section-title mb-0">CLASSES</p>
+
+    <!-- Toggle Buttons to switch between ON-PREMISE and MOBILE classes -->
+    <div class="toggle-buttons">
+        <div class="toggle-container">
+            <!-- Active state: "ON-PREMISE" classes are initially selected -->
+            <div id="on-premise" class="toggle-option active">ON-PREMISE</div>
+            <!-- Inactive state: "MOBILE" classes (can be activated by user) -->
+            <div id="mobile" class="toggle-option inactive">MOBILE</div>
+        </div>
+    </div>
+
+    <!-- Grid container for different class cards -->
+    <div class="classes-grid">
+        <!-- Class Card: Strength Training -->
+        <div class="class-card">
+            <!-- Image representing the Strength Training class -->
+            <img src="/assets/173069aab965e665a222d4aaab510b97.jpeg" alt="Strength Training">
+            <div class="class-content">
+                <div class="row mb-2">
+                    <!-- Class title displayed in 75% of the row -->
+                    <div class="col-9"><span class="class-title">STRENGTH TRAINING</span></div>
+                    <!-- Class duration displayed in 25% of the row -->
+                    <div class="col-3 pr-0"><span class="time">45 min</span></div>
+                </div>
+                <!-- Class description -->
+                <p class="class-description">Build muscle, increase strength, and improve overall fitness with our
+                    comprehensive strength program.</p>
+
+                <!-- Booking button and class availability -->
+                <div class="btns-container">
+                    <div class="tags">
+                        <span>On-Premise</span>
+                        <span>Mobile</span>
+                    </div>
+                    <a class="btn book-btn">BOOK NOW</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Class Card: HIIT Workout -->
+        <div class="class-card">
+            <img src="/assets/abad37f27076f53a22125215b147edc0.jpeg" alt="HIIT Workout">
+            <div class="class-content">
+                <div class="row mb-2">
+                    <div class="col-9"><span class="class-title">HIIT WORKOUT</span></div>
+                    <div class="col-3 pr-0"><span class="time">30 min</span></div>
+                </div>
+                <p class="class-description">High-Intensity Interval Training to maximize calorie burn and improve
+                    cardiovascular fitness.</p>
+
+                <div class="btns-container">
+                    <div class="tags">
+                        <span>On-Premise</span>
+                        <span>Mobile</span>
+                    </div>
+                    <a class="btn book-btn">BOOK NOW</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Class Card: Boxing for Women -->
+        <div class="class-card">
+            <img src="/assets/39f5001a34df6398f13a87a3749df694.jpeg" alt="Boxing for Women">
+            <div class="class-content">
+                <div class="row mb-2">
+                    <div class="col-9"><span class="class-title">BOXING FOR WOMEN</span></div>
+                    <div class="col-3 pr-0"><span class="time">60 min</span></div>
+                </div>
+                <p class="class-description">Build strength & confidence with our high-intensity boxing classes designed
+                    for women of all fitness levels.</p>
+
+                <div class="btns-container">
+                    <div class="tags">
+                        <span>On-Premise</span>
+                        <span>Mobile</span>
+                    </div>
+                    <a class="btn book-btn">BOOK NOW</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Button to view all available classes -->
+    <a href="pages/classes.html" target="_blank" class="view-all">VIEW ALL CLASSES</a>
+</div>
+
+<!-- About Us Section -->
+<div class="about-section">
+    <div class="about-grid">
+        <!-- First Row: Gym Introduction -->
+        <div class="about-image">
+            <img src="/assets/c7221fd2d08e655344b214ea0246e101.png" alt="Man lifting dumbbells">
+        </div>
+        <div class="about-text">
+            <p class="about-title">ABOUT US</p>
+            <p class="about-description">
+                Welcome to Summit Fitness, Sydney’s premier gym dedicated to helping you reach new heights in health and
+                wellness.
+                Located in the heart of the city, we offer state-of-the-art facilities, expert trainers, and a
+                supportive community to
+                empower every step of your fitness journey.
+            </p>
+            <p class="about-description">
+                Whether you’re here to lift, stretch, sweat, or recharge, Summit Fitness combines cutting-edge equipment
+                with tailored
+                classes designed for all fitness levels. From dynamic group sessions to personalized training
+                programs, our goal is
+                to help you unlock your potential and achieve balance in mind and body.
+            </p>
+            <p class="about-description">At Summit Fitness, we don’t just help you train – we help you thrive.</p>
+        </div>
+
+        <!-- Second Row: Join Our Team -->
+        <div class="join-text">
+            <p class="join-title">JOIN OUR TEAM</p>
+            <p class="join-description">
+                Are you a passionate personal trainer looking to make an impact? At Summit Fitness, we’re always on the
+                lookout
+                for driven professionals to inspire and support our growing community. Join our team and take your
+                career to new heights
+                in a state-of-the-art facility with endless opportunities.
+            </p>
+            <p class="join-description">Reach out today!</p>
+        </div>
+        <div class="join-image">
+            <img src="/assets/160f479dad219deede021edc5330941d.png" alt="Woman lifting barbell">
+        </div>
+    </div>
+</div>
+
+<!-- App Promotion Section -->
+<div class="app-section">
+    <div class="app-container">
+        <!-- Left Side: App Information and Download Links -->
+        <div class="app-text">
+            <p class="app-text-title">Manage Your Bookings And Communicate With Your Trainer Easily Through Our
+                Dedicated App</p>
+            <p>Download Now</p>
+            <div class="app-buttons">
+                <!-- App Store Download Button -->
+                <a href="#" class="app-store mr-3">
+                    <img src="/assets/download-on-the-app-store.svg" alt="Download on the App Store">
+                </a>
+                <!-- Google Play Download Button -->
+                <a href="#" class="google-play">
+                    <img src="/assets/GetItOnGooglePlay_Badge_Web_color_English.png" alt="Get it on Google Play">
+                </a>
+            </div>
+        </div>
+
+        <!-- Right Side: App Screenshots -->
+        <div class="app-images">
+            <img src="/assets/promotion_img_154468179399png" alt="App Screens" class="phones">
+        </div>
+    </div>
+</div>
+
+<!-- Footer Section -->
+<footer class="footer">
+    <div class="footer-container">
+        <!-- Left: Logo and Policies -->
+        <div class="footer-left">
+            <p class="footer-title">SUMMIT FITNESS</p>
+
+
+            <!-- Contact Info Box -->
+            <div class="footer-contact-modern">
+                <div class="contact-icon">
+                    <i class="fas fa-phone-alt"></i>
+                </div>
+                <div class="contact-details">
+                    <span class="contact-number">0432 552 340</span>
+                    <span class="contact-hours">Mon - Fri: 9:30am - 5:00pm</span>
+                </div>
+            </div>
+
+        </div>
+        <!-- Right: App Download Buttons -->
+        <div class="footer-right">
+            <div class="footer-menu">
+                <a href="#">Home</a>
+                <a href="#">About Us</a>
+                <a href="#">Trust & Safety</a>
+                <a href="#">Contact</a>
+            </div>
+
+            <div class="footer-imgs">
+                <a href="#" class="app-store mr-1">
+                    <img src="/assets/download-on-the-app-store.svg" alt="App Store">
+                </a>
+                <a href="#" class="google-play">
+                    <img src="/assets/GetItOnGooglePlay_Badge_Web_color_English.png" alt="Google Play">
+                </a>
+            </div>
+
+            <div class="footer-social-icons">
+                <div class="d-flex">
+                    <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-youtube"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-google"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-pinterest"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#" class="social-icon"><i class="fas fa-rss"></i></a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="privacy-and-terms-section">
+        <span><a href="#">Privacy & Policy</a> | <a href="#">Terms & Conditions</a></span>
+    </div>
+</footer>
+
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
+
+<script>
+    function switchLanguage(lang) {
+        document.documentElement.lang = lang;
+        document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr';
+        if (lang === 'ar') {
+            document.body.classList.add('rtl');
+        } else {
+            document.body.classList.remove('rtl');
+        }
+        // Load content for the selected language
+    }
+
+    document.querySelector('.toggle-container').addEventListener('click', function () {
+        let onPremise = document.getElementById('on-premise');
+        let mobile = document.getElementById('mobile');
+
+        if (onPremise.classList.contains('active')) {
+            onPremise.classList.remove('active');
+            onPremise.classList.add('inactive');
+            mobile.classList.remove('inactive');
+            mobile.classList.add('active');
+        } else {
+            onPremise.classList.remove('inactive');
+            onPremise.classList.add('active');
+            mobile.classList.remove('active');
+            mobile.classList.add('inactive');
+        }
+    });
+</script>

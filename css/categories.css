@@ -1,0 +1,15 @@
+.categories-body .main-section{
+    height: 272px;
+    background: url('/assets/classesNav.jpeg') no-repeat center center;
+    background-size: cover;
+}
+
+@media (max-width: 991px) {
+    .main-titles-positions {
+        width: 100%;
+    }
+
+    .first-title h1 {
+        font-size: 32px; /* Adjust size as needed */
+    }
+}
